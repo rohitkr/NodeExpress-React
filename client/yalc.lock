@@ -1,0 +1,13 @@
+{
+  "version": "v1",
+  "packages": {
+    "navi-design-system": {
+      "signature": "973447f3bd16a9bfbd2954456b4267fa",
+      "file": true
+    },
+    "whatfix-icons": {
+      "signature": "75ff874dd308f0224687390508c72c2b",
+      "file": true
+    }
+  }
+}

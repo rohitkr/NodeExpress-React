@@ -1,28 +1,21 @@
-import React, { useEffect, useState } from "react";
-import Login from "./components/login";
-import Homepage from "./components/homepage";
+import logo from './logo.svg';
+import './App.css';
+import React from 'react';
+import Button from "@material-ui/core/Button";
 
 function App() {
-  const [isUserSignedIn, setIsUserSignedIn] = useState(false);
-  useEffect(() => {
-    if (localStorage.getItem("token")) setIsUserSignedIn(true);
-    else setIsUserSignedIn(false);
-  }, []);
-
-  const onLoginSuccessful = () => {
-    setIsUserSignedIn(true);
-  };
-
-  const onLogout = () => {
-    localStorage.removeItem("name");
-    localStorage.removeItem("token");
-    setIsUserSignedIn(false);
-  };
-
   return (
-    (isUserSignedIn && <Homepage onLogout={onLogout} />) || (
-      <Login onLoginSuccessful={onLoginSuccessful} />
-    )
+    <div className="App">
+      <div>
+        <h1>My First React App</h1>
+
+        <Button variant="contained" color="primary">
+          Hello World
+        </Button>
+
+        <p>Welcome to my first react app. This is a simple react app that I created to learn the basics of react.</p>
+      </div>
+    </div>
   );
 }
 

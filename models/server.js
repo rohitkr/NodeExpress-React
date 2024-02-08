@@ -1,6 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const helmet = require("helmet");
+const crypto = require('crypto');
+
+// Generate a random nonce value
+// const nonce = crypto.randomBytes(16).toString('base64');
+const nonce = "C7Jo9Ot7OGp36jCfSpoTKw==";
+console.log('nonce', nonce);
 
 class Server {
   constructor() {
@@ -16,9 +23,15 @@ class Server {
   }
 
   middlewares() {
+    // this.app.use(helmet());
     this.app.use(cors());
     this.app.use(express.json());
-
+    this.app.use((req, res, next) => {
+      res.setHeader('Content-Security-Policy', `default-src 'self'; script-src 'self' 'nonce-${nonce}'; style-src 'self' 'nonce-${nonce}'`);
+      res.locals.nonce = nonce;
+      next();
+    });
+    
     // Pick up React index.html file
     this.app.use(
       express.static(path.join(__dirname, "../client/build"))
