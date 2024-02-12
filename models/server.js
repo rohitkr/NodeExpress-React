@@ -27,7 +27,7 @@ class Server {
     this.app.use(cors());
     this.app.use(express.json());
     this.app.use((req, res, next) => {
-      res.setHeader('Content-Security-Policy', `default-src 'self'; script-src 'self' 'nonce-${nonce}'; style-src 'self' 'nonce-${nonce}'`);
+      res.setHeader('Content-Security-Policy', `default-src 'self'; style-src 'self' 'nonce-${nonce}';`);
       res.locals.nonce = nonce;
       next();
     });

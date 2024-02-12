@@ -1,22 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react';
-import Button from "@material-ui/core/Button";
+import React from "react";
+import JssButton from "./components/JssButton/JssButton";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <div>
-        <h1>My First React App</h1>
 
-        <Button variant="contained" color="primary">
-          Hello World
-        </Button>
-
-        <p>Welcome to my first react app. This is a simple react app that I created to learn the basics of react.</p>
-      </div>
-    </div>
-  );
-}
+const App = () => (
+  <>
+    <div className="App-header"> React App Header </div>
+    <div style={{width: "100%", height: "100px", background: "#e4eb6c", textAlign: "center", fontSize: "2rem"}}> React </div>
+    <JssButton>Click me</JssButton>
+  </>
+);
 
 export default App;
