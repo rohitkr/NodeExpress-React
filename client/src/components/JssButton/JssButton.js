@@ -1,9 +1,13 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 
+const buttonBackgroundColor = "#e629a0";
+const buttonHoverBackgroundColor = "#b51f7e";
+const buttonActiveBackgroundColor = "#8a165f";
+
 const useStyle = createUseStyles({
   button: {
-    background: "#e629a0",
+    background: buttonBackgroundColor,
     color: "#ffffff",
     padding: "10px 20px",
     minWidth: "150px",
@@ -13,7 +17,7 @@ const useStyle = createUseStyles({
     transition: "all 0.3s ease",
     fontSize: "1.5rem",
     "&:hover": {
-      background: "#b51f7e",
+      background: buttonHoverBackgroundColor,
       outline: "none",
     },
     "&:active": {
@@ -22,8 +26,7 @@ const useStyle = createUseStyles({
       outline: "none",
     },
     "&:focus": {
-      outline: "none",
-      outline: "4px solid #c76fa6",
+      outline: `4px solid ${buttonActiveBackgroundColor}`,
     },
   },
 });

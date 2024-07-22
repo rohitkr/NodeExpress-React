@@ -6,8 +6,10 @@ const crypto = require('crypto');
 
 // Generate a random nonce value
 // const nonce = crypto.randomBytes(16).toString('base64');
-const nonce = "C7Jo9Ot7OGp36jCfSpoTKw==";
-console.log('nonce', nonce);
+const nonceScript = "C7Jo9Ot7OGp36jCfSpoTKw==";
+const nonceStyle = "A7Jo9Ot7OGp36jCfSpoTKw==";
+console.log('nonceScript: ', nonceScript);
+console.log('nonceStyle: ', nonceStyle);
 
 class Server {
   constructor() {
@@ -27,8 +29,8 @@ class Server {
     this.app.use(cors());
     this.app.use(express.json());
     this.app.use((req, res, next) => {
-      res.setHeader('Content-Security-Policy', `default-src 'self'; style-src 'self' 'nonce-${nonce}';`);
-      res.locals.nonce = nonce;
+      res.setHeader('Content-Security-Policy', `default-src 'self'; style-src 'self' 'nonce-${nonceStyle}'; script-src 'self' 'nonce-${nonceScript}';`);
+      res.locals.nonce = nonceScript;
       next();
     });
     
