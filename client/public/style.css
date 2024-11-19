@@ -1,0 +1,19 @@
+#css-testing {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#css-testing::after {
+  content: "Style.css";
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+}

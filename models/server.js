@@ -29,7 +29,8 @@ class Server {
     this.app.use(cors());
     this.app.use(express.json());
     this.app.use((req, res, next) => {
-      res.setHeader('Content-Security-Policy', `default-src 'self'; style-src 'self' 'nonce-${nonceStyle}'; script-src 'self' 'nonce-${nonceScript}';`);
+      // res.setHeader('Content-Security-Policy', `default-src 'self'; style-src 'self' 'nonce-${nonceStyle}'; script-src 'self' 'nonce-${nonceScript}';`);
+      res.setHeader('Content-Security-Policy', `default-src 'self'; style-src 'self'; script-src 'self';`);
       res.locals.nonce = nonceScript;
       next();
     });

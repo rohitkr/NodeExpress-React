@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "navi-design-system": {
+      "signature": "35b8ccd209181691fe0be1f6fe47e763",
+      "file": true
+    }
+  }
+}

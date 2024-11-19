@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+    <!-- <script language='javascript' async='true' type='text/javascript' src='https://cdn.quickolabs.com/prod/c0da841a-7c52-4647-84b7-153a74791d50/initiator/initiator.nocache.js'></script> -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -12,9 +15,11 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!-- Add csp-nonce to be added replaced from web pack -->
     <!-- <meta property="csp-nonce" content="<%=htmlWebpackPlugin.options.nonce%>" /> -->
-    <meta property="csp-nonce" content="A7Jo9Ot7OGp36jCfSpoTKw==" />
+    <!-- <meta property="csp-nonce" content="A7Jo9Ot7OGp36jCfSpoTKw==" /> -->
 
-    <style nonce="A7Jo9Ot7OGp36jCfSpoTKw==">
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- <style nonce="A7Jo9Ot7OGp36jCfSpoTKw==">
       body {
         margin: 0;
         padding: 0;
@@ -24,7 +29,7 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
-    </style>
+    </style> -->
 
     <!-- <script nonce="C7Jo9Ot7OGp36jCfSpoTKw==" src="http://192.168.1.5:8080/temp-script/test.js"></script> -->
 
@@ -44,8 +49,12 @@
     -->
     <title>React App</title>
   </head>
+  <style id="csp-styles">
+
+  </style>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <!-- <div  id="css-testing">CSS customization inline css</div> -->
+    <div id="root" ></div>    
   </body>
 </html>
